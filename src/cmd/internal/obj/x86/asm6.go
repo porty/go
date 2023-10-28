@@ -2518,7 +2518,8 @@ func prefixof(ctxt *obj.Link, a *obj.Addr) int {
 					objabi.Hdragonfly,
 					objabi.Hfreebsd,
 					objabi.Hnetbsd,
-					objabi.Hopenbsd:
+					objabi.Hopenbsd,
+					objabi.Hserenity: // TODO: lol I dunno
 					return 0x65 // GS
 				}
 			}
@@ -2542,6 +2543,7 @@ func prefixof(ctxt *obj.Link, a *obj.Addr) int {
 				objabi.Hfreebsd,
 				objabi.Hnetbsd,
 				objabi.Hopenbsd,
+				objabi.Hserenity, // TODO: lol I dunno
 				objabi.Hsolaris:
 				return 0x64 // FS
 
